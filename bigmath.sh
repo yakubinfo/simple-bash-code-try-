@@ -2,7 +2,7 @@ echo "22/7" | bc -l # exact no task:1
 
 x=22
 y=7
-z=$((x/y))
+z=$((x/y)) | bc -l
 echo $z # returning only the integer task:2
 
 echo "I got result" $z # floor division task:3
