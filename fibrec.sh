@@ -14,8 +14,3 @@ read -p "enter the no " num
     fi
 }
 fib
-
-
-
-
-fib
