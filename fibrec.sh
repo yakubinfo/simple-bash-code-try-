@@ -1,9 +1,21 @@
-fib {
-     local i
-     i=$1
-     if (( i <= 1 )); then
-         echo $i
+function fib {
+read -p "enter the no " num
+     if [ "$num" -le 1 ]; then
+        echo $num
      else
-         echo $(( $(fib $((i-1)) ) + $(fib $((i - 2)) ) ))
-     fi
+        echo $((fib $(num-1) + fib $(num-2)))
+    fi
+}function fib {
+read -p "enter the no " num
+     if [ "$num" -le 1 ]; then
+        echo $num
+     else
+        echo $((fib $(num-1) + fib $(num-2)))
+    fi
 }
+fib
+
+
+
+
+fib
