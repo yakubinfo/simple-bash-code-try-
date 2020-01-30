@@ -1,16 +1,19 @@
-function fib {
-read -p "enter the no " num
-     if [ "$num" -le 1 ]; then
-        echo $num
-     else
-        echo $((fib $(num-1) + fib $(num-2)))
-    fi
-}function fib {
-read -p "enter the no " num
-     if [ "$num" -le 1 ]; then
-        echo $num
-     else
-        echo $((fib $(num-1) + fib $(num-2)))
-    fi
+fib()
+{
+if [ $1 -le 1 ]
+then
+     echo $1
+else
+     let a=$1-1
+     let b=$1-2
+     a1=$(fib $a)
+     b1=$(fib $b)
+     echo " $a1 + $b1 " | bc
+fi
 }
-fib
+
+read -p "enter the number" n
+for i in $(seq 0 $n)
+do
+echo -n "$(fibo $i)"
+done
