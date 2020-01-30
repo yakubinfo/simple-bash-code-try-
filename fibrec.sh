@@ -15,5 +15,5 @@ fi
 read -p "enter the number" n
 for i in $(seq 0 $n)
 do
-echo -n "$(fibo $i)"
+echo -n "$(fib $i)"
 done
