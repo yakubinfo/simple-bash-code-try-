@@ -13,7 +13,7 @@ fi
 }
 
 read -p "enter the number" n
-for i in $(seq 0 $n)
+for i in $(seq 0 (($n-1 | bc)))
 do
 echo -n "$(fib $i)"
 done
